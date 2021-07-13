@@ -36,7 +36,7 @@ public class ApiServiceImpl implements ApiService {
         List<Users> result = repository.findAll();
         // List 를 entity to dto 하는 함수
         Function<Users, UserDTO> fn = (this::entityToDto);
-        // dto 로 만들어 return
+        // dto 로 만들어 return ㄱ
         return result.stream().map(fn).collect(Collectors.toList());
     }
 }

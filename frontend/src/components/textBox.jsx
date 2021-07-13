@@ -5,11 +5,7 @@ class TextBox extends Component {
 
     getData = (event) => {
         this.props.getTextBoxVal(event.target.value);
-<<<<<<< HEAD:frontend/src/components/textBox.jsx
         event.preventDefault();
-=======
-        
->>>>>>> upstream/main:src/components/textBox.jsx
     }
 
 

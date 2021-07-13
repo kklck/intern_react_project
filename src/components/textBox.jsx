@@ -6,6 +6,7 @@ class TextBox extends Component {
     
     getData = (event) => {
         this.props.getTextBoxVal(event.target.value);
+        
     }
     
 

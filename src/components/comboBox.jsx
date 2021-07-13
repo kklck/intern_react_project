@@ -4,43 +4,29 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 class ComboBox extends Component {
-    // state = {
-    //     age: 0,
-    // };
+
     
     getData = (event) => {
+      console.log(event.target.value);
       this.props.getComboBoxVal(event.target.value)
     }
 
 
-  // handleChange = (event) => {
-  //     const name = event.target.name;
-  //     this.setState({
-  //       ...this.state,
-  //       [name]: event.target.value
-  //     });
-  //     console.log(typeof(event.target.value));
-  //     console.log(this.state);
-  //   };
-
   render() {
       return (
-        <FormControl>
-            <InputLabel htmlFor="age-native-simple">Age</InputLabel>
-            <Select
-                native
-                onChange={this.getData}
-                inputProps={{
-                name: "age",
-                id: "age-native-simple"
-                }}
-            >
-                <option aria-label="None" value="" />
-                <option value={10}>Teenager</option>
-                <option value={20}>Twenty</option>
-                <option value={30}>Thirty</option>
-            </Select>
-        </FormControl>
+        <>
+        <select name="score" className="select-box" onChange={this.getData} id="select-id">
+          {/* <option key="1" value="A">A</option>
+          <option key="2" value="B">B</option>
+          <option key="3" value="C">C</option>
+          <option key="4" value="D">D</option> */}
+          {
+            this.props.dataList && this.props.dataList.map(data => (
+              <option key={data.id} value={data.id}>{data.val}</option>
+            ))
+          }
+        </select>
+        </>
       );
   }
 }

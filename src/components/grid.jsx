@@ -20,7 +20,6 @@ import {
   createData(3,'toga','garu@gmail.com','01034871204'),]
 
 class Grid extends Component {
-  
 
     render() {
         return (

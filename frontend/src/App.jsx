@@ -38,10 +38,9 @@ class App extends Component {
             name : root.textBoxVal,
             gender : root.comboBoxVal,
             part : root.radioBtnVal
-        })
-            .then(function (response) {
-                // response
-            }).catch(function (error) {
+        }).then(function (response) {
+            // response
+        }).catch(function (error) {
             // 오류발생시 실행
         }).then(function() {
             // 항상 실행
